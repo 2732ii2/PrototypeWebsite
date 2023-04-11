@@ -19,6 +19,7 @@
 .Header{
   width: 100%;
   height: 70px;
+  overflow: hidden;
   background: white;
   border: .5px solid rgba(153, 149, 149, 0.1);
 }
@@ -26,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 26%;
+  width: 28%;
   height: 100%;
   /* border-right: 1px solid black; */
 }
@@ -34,8 +35,12 @@
   width: 20%;
   height: 95%;
   margin-left: 3%;
+  
   /* margin-left: 10px; */
   /* border: 1px solid black; */
+}
+#menu{
+  margin-right: 3%;
 }
 #comp{
   width: 65px;
@@ -56,25 +61,73 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .left_bar{
   width: 5%;
   /* width: 20%; */
+  display: flex;
+  flex-direction: column;
   z-index: 0;
   transition: all .35s;
   height: 100%;
-  /* border: 1px solid red; */
+  border: .1px solid rgb(168, 164, 164,.5);
+}
+.main_divs{
+  width: 100%;
+  /* border: 1px solid black; */
+  height: 90%;
+}
+.last_div{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  height: 10%;
+  position: relative;
+  border-top: .1px solid black;
+}
+
+#ll_s_h{
+  font-size: 1.1rem;
+  margin-top: -2px;
 }
 .rightco{
   width: 95%;
   min-width: 95%;
-  z-index: -1;
-
+  /* z-index: -1; */
+  display: flex;
   min-width:80%;
   height: 100%;
+}
+.signin_div{
+  /* display: ; */
+  position: absolute;
+  width: 43%;
+  display: none;
+  height: 70%;
+  border-radius: 40px;
+  /* backdr */
+  /* z-index: 1; */
+  left: 30%;
+  background:#fff;
+  top:15%;
+  /* right: auto; */
+  /* border: .1px solid rgb(21, 20, 20,.5); */
+  box-shadow: 0 21px 42px -10px rgb(33, 32, 32,.5);
 }
 #rigimg{
   width: 100%;
   height: 100%;
+}
+
+
+@media (max-width:1149px) {
+  #menu{
+    margin-right: 13%;
+  }
+  #hedh_3{
+    margin-right: 4%;
+  }
 }

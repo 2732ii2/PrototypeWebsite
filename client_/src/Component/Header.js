@@ -31,17 +31,17 @@ export default function Header() {
     <div className="Header">
       <div className="firsthalf">
         <img onClick={clickhandler} src={Menu} id="menu" />
-        {/* <div
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginLeft: "-140px",
+            marginLeft: "-60px",
           }}
         >
           <img src={Compicon} id="comp" />
           <h3 id="hedh_3">CipherSchools</h3>
-        </div> */}
+        </div>
         {/* <img src={Browse} id="brows" /> */}
         <div
           style={{
