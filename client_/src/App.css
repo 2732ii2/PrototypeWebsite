@@ -13,12 +13,14 @@
 .con{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .Header{
   width: 100%;
   height: 70px;
   background: white;
-  border: 1px solid rgb(13, 12, 12,.2);
+  border: .5px solid rgba(153, 149, 149, 0.1);
 }
 .firsthalf{
   display: flex;
@@ -29,20 +31,50 @@
   /* border-right: 1px solid black; */
 }
 #menu,#comp{
-  width: 70px;
-  height: 65px;
-  margin-left: 10px;
+  width: 20%;
+  height: 95%;
+  margin-left: 3%;
+  /* margin-left: 10px; */
   /* border: 1px solid black; */
 }
 #comp{
   width: 65px;
 }
 #hedh_3{
-  font-size: 22px;
+  /* font-size: 22px; */
+  font-size: 1.2rem;
   font-weight: 700;
 }
 #brows{
   width: 120px;
   height: 98%;
-  margin-left: -100px;
+  /* margin-left: -100px; */
+}
+.down_con{
+  width: 100%;
+  height: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.left_bar{
+  width: 5%;
+  /* width: 20%; */
+  z-index: 0;
+  transition: all .35s;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+.rightco{
+  width: 95%;
+  min-width: 95%;
+  z-index: -1;
+
+  min-width:80%;
+  height: 100%;
+}
+#rigimg{
+  width: 100%;
+  height: 100%;
 }
