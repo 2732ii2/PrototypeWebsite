@@ -9,7 +9,15 @@ export default function Rightcontent() {
   return (
     <div className="rightco">
       <img id="rigimg" src={bgimg} />
-      <SignDiv />
+      {values.state ? (
+        values.state.values === "show" ? (
+          <SignDiv />
+        ) : (
+          console.log("we don't have show")
+        )
+      ) : (
+        console.log("we don't")
+      )}
     </div>
   );
 }
