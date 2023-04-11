@@ -2,7 +2,21 @@ import React, { useState } from "react";
 
 export default function SignDiv() {
   var [seton, setoff_] = useState("on_1");
-
+    function clickHandler(e)
+    {
+        var a = e.target.parentElement;
+        // console.log(e.target.innerText);
+        if (e.target.innerText === "Sign in"){
+            a.style.border = "2px solid red";
+            setoff_("");
+        } 
+        else{
+            var parent = e.target.parentElement;
+            parent.style.height="70%";
+            setoff_("on");
+            a.style.border = "2px solid green";
+        }
+    }
   return (
     <div className="signin_div">
       {seton ? (
@@ -14,12 +28,7 @@ export default function SignDiv() {
             justifyContent: "center",
             alignItems: "center",
           }}
-          onClick={(e) => {
-            // alert("hello");
-            var a = e.target.parentElement;
-            a.style.border = "2px solid red";
-            setoff_("");
-          }}
+          onClick={clickHandler}
         >
           Sign in
         </div>
@@ -32,14 +41,9 @@ export default function SignDiv() {
             justifyContent: "center",
             alignItems: "center",
           }}
-          onClick={(e) => {
-            console.log(e.target.innerText);
-            setoff_("on");
-            var a = e.target.parentElement;
-            a.style.border = "2px solid green";
-          }}
+          onClick={ clickHandler }
         >
-          sign out
+          sign up
         </div>
       )}
     </div>

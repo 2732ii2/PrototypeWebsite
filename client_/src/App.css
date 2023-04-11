@@ -110,6 +110,7 @@
   border-radius: 40px;
   /* backdr */
   /* z-index: 1; */
+  transition: all 5s;
   left: 30%;
   background:#fff;
   top:15%;
