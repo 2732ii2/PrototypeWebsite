@@ -110,10 +110,11 @@
   border-radius: 40px;
   /* backdr */
   /* z-index: 1; */
-  transition: all 5s;
+  transition: all .1s;
   left: 30%;
   background:#fff;
   top:15%;
+  bottom: 5%;
   /* right: auto; */
   /* border: .1px solid rgb(21, 20, 20,.5); */
   box-shadow: 0 21px 42px -10px rgb(33, 32, 32,.5);
@@ -123,7 +124,117 @@
   height: 100%;
 }
 
+#ssame{
+  width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   padding-top: 3%;
+     align-items: center;
+   /* justify-content: center;
+  */
+}
 
+#crosshead{
+  width: 100%;
+  height: 7%;
+  font-size: 34px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* border: 1px solid #000; */
+}
+#signheading{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 27%;
+  /* border-bottom: 1px solid black; */
+}
+#ssh1{
+  font-size: 34px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+  letter-spacing: 1px;
+}
+#buttinp{
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 13%;
+  height: 50%;
+  /* border-bottom: 1px solid black; */
+}
+#sshimg{
+  width: 65px;
+  height: 65px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+#inpsame{
+  width: 100%;
+  border-radius: 15px;
+  /* height: 60px; */
+  height: 16%;
+  background: #f2f5fa;
+  margin-top: 20px;
+  font-size: 22px;
+  padding-left: 20px;
+  outline: none;
+  border: 1px solid rgba(10,30,50,.1);
+}
+#ssih5{
+  width: 100%;
+  height: 15%;
+  margin-top: 2%;
+  font-size: 20px;
+  /* border: 1px solid black; */
+  text-align: end;
+  font-weight: 450;
+  letter-spacing: 1px;
+  color:orange;
+}
+#ssbtn{
+  /* border: 1px solid black; */
+  width: 100%;
+    height: 16%;
+  border-radius: 15px;
+  color: white;
+  background: orange;
+  outline: none;
+  border:none;
+  font-size: 22px;
+}
+#ssip{
+  font-weight: 420;
+  letter-spacing: 1px;
+  /* border: 1px solid black; */
+  height: 10%;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+#ssp{
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+#ssh2{
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 24px;
+  margin-top: 25px;
+}
 @media (max-width:1149px) {
   #menu{
     margin-right: 13%;
