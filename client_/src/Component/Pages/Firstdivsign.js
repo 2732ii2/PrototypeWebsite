@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Compicon from "../company.png";
 
 import CloseIcon from "@mui/icons-material/Close";
 export default function Firstdivsign({props}) {
   console.log(props);
   var list_ = ["Email ID", "Password"];
-
+  var obj_={"Email ID":"","Password":""};
+  var [state,setstate]=useState(obj_);
+  console.log(state);
   return (
     <div id="ssame">
       <div id="crosshead">
@@ -22,11 +24,19 @@ export default function Firstdivsign({props}) {
       <div id="buttinp">
         {list_.map((e, i) => {
           if (i === 0) {
-            return <input id="inpsame" placeholder={e} key={i} />;
+            return <input name={e} type="text" onChange={(e)=>{
+              var name=e.target.name;
+              setstate({ ...state, [name]: e.target.value });
+            }} id="inpsame" placeholder={e} key={i} />;
           } else {
             return (
               <div id="inpsame" key={i}>
-                <input
+                <input type="password"
+                  onChange={(e) => {
+                    var name = e.target.name;
+                    setstate({ ...state, [name]: e.target.value });
+                  }}
+                  name={e}
                   style={{
                     width: "80%",
                     height: "100%",

@@ -24,7 +24,7 @@ export default function Seconddiv({props}) {
       <div id="buttinp">
         {list_.map((e, i) => {
           if (i < 4) {
-            return <input name={e} onChange={(e)=>{
+            return <input type='text' name={e} onChange={(e)=>{
               var name_=e.target.name;
               console.log(name_);
                 setstateobj({ ...stateobj,[name_]:e.target.value });
@@ -32,7 +32,7 @@ export default function Seconddiv({props}) {
           } else if (i === 4) {
             return (
               <div id="inpsame" key={i}>
-                <input name={e}
+                <input type='password' name={e}
                   onChange={(e) => {
                     var name_ = e.target.name;
                     console.log(name_);
