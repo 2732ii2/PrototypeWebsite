@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './second_div.css';
 import CloseIcon from "@mui/icons-material/Close";
 import Compicon from "../company.png";
 export default function Seconddiv({props}) {
+  var obj_={"First Name":"","Last Name":'',"Email Address":"","Phone(Optional)":"","Password":""};
+  var [stateobj,setstateobj]=useState(obj_);
+  console.log(stateobj);
   var list_=["First Name","Last Name","Email Address","Phone(Optional)","Password"];
   return (
-    <div id="ssame" onClick={props}>
+    <div id="ssame">
       <div id="crosshead">
         Sign In <CloseIcon style={{ fontSize: "42px", fontWeight: "800" }} />{" "}
       </div>
@@ -20,12 +23,21 @@ export default function Seconddiv({props}) {
 
       <div id="buttinp">
         {list_.map((e, i) => {
-          if (i <4 ) {
-            return <input id="inpsame" placeholder={e} key={i} />;
-          } else  if(i===4) {
+          if (i < 4) {
+            return <input name={e} onChange={(e)=>{
+              var name_=e.target.name;
+              console.log(name_);
+                setstateobj({ ...stateobj,[name_]:e.target.value });
+            }} id="inpsame" placeholder={e} key={i} />;
+          } else if (i === 4) {
             return (
               <div id="inpsame" key={i}>
-                <input
+                <input name={e}
+                  onChange={(e) => {
+                    var name_ = e.target.name;
+                    console.log(name_);
+                    setstateobj({ ...stateobj, [name_]: e.target.value });
+                  }}
                   style={{
                     width: "80%",
                     height: "100%",
@@ -41,7 +53,9 @@ export default function Seconddiv({props}) {
           }
         })}
         {/* <h5 id="ssih5">Forget Password ?</h5> */}
-        <button id="sssbtn">Create Account</button>
+        <button onClick={props} id="sssbtn">
+          Create Account
+        </button>
         {/* <p id="ssip">
           {" "}
           Don't have an account ?{" "}

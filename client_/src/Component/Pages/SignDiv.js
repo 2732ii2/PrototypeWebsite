@@ -16,7 +16,9 @@ export default function SignDiv() {
           a = e.target.parentElement.parentElement.parentElement.parentElement;
         }
         else{
-          a=e.target.parentElement;
+          a =
+            e.target.parentElement.parentElement.parentElement;
+          console.log(a);
         }
           if (e.target.className === "span_") {
             a.style.top = "12%";
