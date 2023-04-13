@@ -2,7 +2,11 @@
 MERN Stack Project
 
 
-
+# Technologies is been Used: 
+- Redux for Managing and updating State
+- Html and CSS
+- Mongo-Db
+- React-JS, Express-JS, Node-JS
 
 
 
