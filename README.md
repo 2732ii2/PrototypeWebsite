@@ -9,6 +9,10 @@ MERN Stack Project
 - React-JS, Express-JS, Node-JS
 
 
+# Screenshot
+
+<img width="1440" alt="Screenshot 2023-04-13 at 3 01 16 PM" src="https://user-images.githubusercontent.com/83974207/231717622-56158330-fb5c-40d5-9b02-36b9432ab6c5.png">
+
 
 
 # Getting Started with Create React App
