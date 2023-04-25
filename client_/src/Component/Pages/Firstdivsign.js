@@ -3,7 +3,7 @@ import Compicon from "../company.png";
 
 import CloseIcon from "@mui/icons-material/Close";
 export default function Firstdivsign({props}) {
-  console.log(props);
+  // console.log(props);
   var list_ = ["Email ID", "Password"];
   var obj_={"Email ID":"","Password":""};
   var [state,setstate]=useState(obj_);

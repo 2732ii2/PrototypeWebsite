@@ -2,10 +2,19 @@ import React, { useState } from 'react'
 import './second_div.css';
 import CloseIcon from "@mui/icons-material/Close";
 import Compicon from "../company.png";
+import { submit_data } from '../apis/api';
 export default function Seconddiv({props}) {
   var obj_={"First Name":"","Last Name":'',"Email Address":"","Phone(Optional)":"","Password":""};
   var [stateobj,setstateobj]=useState(obj_);
   console.log(stateobj);
+  async function clickhandler(e){
+
+        console.log(stateobj);
+        const res=await submit_data(stateobj);
+        console.log(res);
+        props(e);
+        
+  }
   var list_=["First Name","Last Name","Email Address","Phone(Optional)","Password"];
   return (
     <div id="ssame">
@@ -24,15 +33,26 @@ export default function Seconddiv({props}) {
       <div id="buttinp">
         {list_.map((e, i) => {
           if (i < 4) {
-            return <input type='text' name={e} onChange={(e)=>{
-              var name_=e.target.name;
-              console.log(name_);
-                setstateobj({ ...stateobj,[name_]:e.target.value });
-            }} id="inpsame" placeholder={e} key={i} />;
+            return (
+              <input
+                type="text"
+                name={e}
+                onChange={(e) => {
+                  var name_ = e.target.name;
+                  console.log(name_);
+                  setstateobj({ ...stateobj, [name_]: e.target.value });
+                }}
+                id="inpsame"
+                placeholder={e}
+                key={i}
+              />
+            );
           } else if (i === 4) {
             return (
               <div id="inpsame" key={i}>
-                <input type='password' name={e}
+                <input
+                  type="password"
+                  name={e}
                   onChange={(e) => {
                     var name_ = e.target.name;
                     console.log(name_);
@@ -53,7 +73,7 @@ export default function Seconddiv({props}) {
           }
         })}
         {/* <h5 id="ssih5">Forget Password ?</h5> */}
-        <button onClick={props} id="sssbtn">
+        <button onClick={clickhandler} id="sssbtn">
           Create Account
         </button>
         {/* <p id="ssip">
