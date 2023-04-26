@@ -8,12 +8,11 @@ export default function Seconddiv({props}) {
   var [stateobj,setstateobj]=useState(obj_);
   console.log(stateobj);
   async function clickhandler(e){
-
-        console.log(stateobj);
-        const res=await submit_data(stateobj);
-        console.log(res);
-        props(e);
-        
+    console.log(stateobj);
+    const res = await submit_data(stateobj);
+    console.log(res,res.headers);
+    
+    props(e);
   }
   var list_=["First Name","Last Name","Email Address","Phone(Optional)","Password"];
   return (

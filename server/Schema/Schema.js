@@ -7,7 +7,8 @@ const Sehema=mongoose.Schema({
     'LastName':String,
     'Email Address':String,
     'Phone(Optional)':String,
-    'Password':String
+    'Password':String,
+    'token':String
 })
 const User =new mongoose.model("User", Sehema);
 export default User;
